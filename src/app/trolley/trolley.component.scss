@@ -1,0 +1,177 @@
+$gray: #727272;
+$blue: #2178a0;
+
+.trolley {
+  .head {
+    background-color: #FAFAFA;
+    height: 15vh;
+
+    .proccess {
+      margin-top: 25px;
+
+      .iconArea-undone {
+        width: 80px;
+        color: $gray;
+        text-align: center;
+
+        .iArea {
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          background-color: $gray;
+          text-align: center;
+          margin: auto;
+
+          i {
+            margin-top: 12px;
+            color: white;
+          }
+        }
+      }
+
+      .iconArea-done {
+        width: 80px;
+        color: $blue;
+        text-align: center;
+
+        .iArea {
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          background-color: $blue;
+          text-align: center;
+          margin: auto;
+
+          i {
+            margin-top: 12px;
+            color: white;
+          }
+        }
+      }
+
+      .line-undone {
+        color: $gray;
+        hr {
+          background-color: $gray;
+          border: 1px solid $gray;
+        }
+      }
+
+      .line-done {
+        color: $blue;
+        hr {
+          background-color: $blue;
+          border: 1px solid $blue;
+        }
+      }
+    }
+  }
+
+  .product {
+    margin-top: 20px;
+  }
+}
+
+.calculation {
+  padding-top: 2rem;
+  input {
+    width: 80px;
+    padding-left: 2rem;
+  }
+  button {
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+  }
+}
+
+.delete {
+  padding-top: 2rem;
+  i {
+    padding-top: 8px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+
+.total {
+  padding-top: 2rem;
+}
+
+.conform {
+  color:#29c56d;
+}
+
+.inconform {
+  color: #D05A5A;
+}
+
+.checkout {
+  width: 100%;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: $blue;
+  cursor: pointer;
+  &:hover {
+    outline: none;
+    opacity: .8;
+  }
+  &:focus {
+    outline: none;
+    opacity: .8;
+  }
+}
+
+.text-gray {
+  color:#979797;
+}
+
+hr {
+  // background-color: $gray;
+  border-top: 1px solid $gray;
+}
+
+hr.dashed {
+  border-top: 1px dashed $gray;
+}
+
+.p-l-5 {
+  padding-left: 5px;
+}
+
+.p-r-5 {
+  padding-right: 5px;
+}
+
+.p-l-20 {
+  padding-left: 20px;
+}
+
+.p-r-20 {
+  padding-right: 20px;
+}
+
+.m-t-20 {
+  margin-top: 20px;
+}
+
+.m-t-r1 {
+  margin-top: 1rem;
+}
+
+.m-t-16 {
+  margin-top: 16px;
+}
+
+.thumb {
+border-radius: 10px;
+width: 100px;
+height: 100px;
+object-fit: cover;
+object-position: center center;
+}
+
+.f-s-24 {
+  font-size: 24px;
+}

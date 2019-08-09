@@ -1,0 +1,207 @@
+
+<div class="trolley">
+  <div class="head">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-6">
+        <div class="proccess">
+          <div class="row">
+            <div class="col-5">
+              <div class="row">
+                <div class="col-4">
+                  <div class="iconArea-done" style="margin: 0 auto 0 0;">
+                    <div class="iArea">
+                      <i class="fas fa-cart-arrow-down"></i>
+                    </div>
+                    <p>購物車</p>
+                  </div>
+                </div>
+                <div class="col-8">
+                  <div class="line-undone">
+                    <hr>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="iconArea-undone" style="margin: auto">
+                <div class="iArea">
+                  <i class="far fa-credit-card"></i>
+                </div>
+                <p>付款</p>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="row">
+                <div class="col-8">
+                  <div class="line-undone">
+                    <hr>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="iconArea-undone" style="margin: 0 0 0 auto;">
+                    <div class="iArea">
+                      <i class="fas fa-check"></i>
+                    </div>
+                    <p>完成訂單</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+
+  <div class="container product">
+    <div class="row">
+      <div class="col-9">
+        <span class="text-gray p-l-20">品項</span>
+      </div>
+      <div class="col-3 text-right">
+        <span class="text-gray p-r-20">小計</span>
+      </div>
+    </div>
+    <hr>
+    <div class="row item">
+      <div class="col-10">
+        <div class="row">
+          <div class="col-2">
+            <img class="thumb" src="./assets/cake.jpg" alt="cake">
+          </div>
+          <div class="col-5">
+            <p class="m-t-16">提拉米蘇蛋糕</p>
+            <p class="text-gray">原價：980元</p>
+          </div>
+          <div class="col-3 calculation">
+            <button (click)="minusCake()"><i class="fas fa-minus"></i></button>
+            <input type="number" [(ngModel)]="cake">
+            <button (click)="addCake()"><i class="fas fa-plus"></i></button>
+          </div>
+          <div class="col-2 delete text-center">
+            <i class="fas fa-trash-alt"></i>
+          </div>
+          <div class="col-12">
+            <p class="inconform">
+              <i class="fas fa-times-circle"></i>
+              【滿千折百周年慶】
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 total text-right">
+        <p class="p-r-20">{{cakeTotal}}元</p>
+      </div>
+    </div>
+    <hr class="dashed">
+    <div class="row item">
+      <div class="col-10">
+        <div class="row">
+          <div class="col-2">
+            <img class="thumb" src="./assets/ice.jpg" alt="ice">
+          </div>
+          <div class="col-5">
+            <p class="m-t-16">莓果冰淇淋</p>
+            <p class="text-gray"><s>原價：230元</s></p>
+          </div>
+          <div class="col-3 calculation">
+            <button (click)="minusIce()"><i class="fas fa-minus"></i></button>
+            <input type="number" [(ngModel)]="ice">
+            <button (click)="addIce()"><i class="fas fa-plus"></i></button>
+          </div>
+          <div class="col-2 delete text-center">
+            <i class="fas fa-trash-alt"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 total text-right">
+        <p class="p-r-20">{{iceTotal}}元</p>
+      </div>
+    </div>
+    <div class="row item m-t-r1">
+      <div class="col-10">
+        <div class="row">
+          <div class="col-2">
+            <img class="thumb" src="./assets/strawberry.jpg" alt="strawberry">
+          </div>
+          <div class="col-5">
+            <p class="m-t-16">單顆草莓</p>
+            <p class="text-gray"><s>原價：5元</s></p>
+          </div>
+          <div class="col-3 calculation">
+            <button (click)="minusStrawberry()"><i class="fas fa-minus"></i></button>
+            <input type="number" [(ngModel)]="strawberry">
+            <button (click)="addStrawberry()"><i class="fas fa-plus"></i></button>
+          </div>
+          <div class="col-2 delete text-center">
+            <i class="fas fa-trash-alt"></i>
+          </div>
+          <div class="col-12">
+            <p class="conform">
+              <i class="fas fa-check-circle m-t-r1"></i>
+              【有買就折】
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-2 total text-right">
+        <p class="p-r-20">{{strawberryTotal}}元</p>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-4 offset-8">
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4"></div>
+          <div class="col-4">
+              <p class="text-right">
+                {{cakeTotal + iceTotal + strawberryTotal}}元
+              </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <p class="inconform">就是要運費</p>
+          </div>
+          <div class="col-4">
+              <p class="text-left">
+                運費
+              </p>
+          </div>
+          <div class="col-4">
+              <p class="text-right">
+                  {{freight}}元
+                </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-4">
+            <p class="text-left">
+              總價
+            </p>
+          </div>
+          <div class="col-4">
+            <p class="text-right f-s-24">
+              {{cakeTotal + iceTotal + strawberryTotal + freight}}元
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4"></div>
+          <div class="col-8">
+            <button class="checkout" type="submit">
+              結帳
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
